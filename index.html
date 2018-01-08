@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="convert.js"></script>
+
+  </head>
+  <body>
+
+    <h1>Decimal Converter</h1>
+    
+    <div class="container">
+      <div class="into">
+        <p id="help-text">Enter a decimal value:</p>
+      </div>
+      <div id="entry-div">
+        <form id="dec-form">
+          <input id="dec-input" class="form-inline" type="text" style="display: inline;"></input>
+          <br>
+          <button id="submit-dec" class="btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container">
+      <div id="conversion-div">
+          <p id="chosen-dec">Decimal: None</p>
+          <p id="binary-text">Binary: -</p>
+          <p id="octal-text">Octal: -</p>
+          <p id="hexadecimal-text">Hexadecimal: -</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer>
+        <p>Copyright Harry Baines 2018</p>
+      </footer>
+    </div>
+
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    <!-- We are using Node.js <script>document.write(process.versions.node)</script>,
+    Chromium <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+    -->
+  </body>
+
+</html>
